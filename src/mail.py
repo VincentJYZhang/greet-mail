@@ -35,7 +35,7 @@ class MailSender:
 
         msg = MIMEMultipart()
         msg.attach(MIMEText(mess, 'html', 'utf-8'))
-        msg['From'] = _format_addr('张钧洋 <%s>' % from_addr)
+        msg['From'] = _format_addr(usrconfig.myname + ' <' + from_addr + '>')
         msg['To'] = _format_addr(receive_name + ' <' + to_addr + '>')
         msg['Subject'] = Header('来自Vincent Zhang的问候', 'utf-8').encode()
 
