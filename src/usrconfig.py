@@ -11,6 +11,8 @@ import security
 
 users = security.users
 
+myname = security.myname
+
 
 FOLDER_PATH_ = "./pictures/"
 
