@@ -1,4 +1,4 @@
-# greet-mail V1.0
+# greet-mail v1.0
 Greet your friends every moning!
 
 
