@@ -98,7 +98,7 @@ class MailSender:
 
 if __name__ == '__main__':
     mess = '<html><body><h1>Hello</h1>' + \
-    '<p>send by <a href="http://www.python.org">Python</a>...</p>' + \
+    '<p>send by <a>Python Tool</a>...</p>' + \
     '</body></html>'
 
-    MailSender.sendmail("vincent", "812400875@qq.com", mess)
+    MailSender.sendmail("vincent", "xxxxx@xx.com", mess)
