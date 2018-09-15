@@ -23,7 +23,7 @@ class WeatherAcquirer:
     def getJson(city_name):
         url = pgconfig.weather_api.format(cityname=city_name,appkey=pgconfig.weather_api_key)
         r = requests.get(url)
-        return json.loads(r.content)
+        return json.loads(r.text)
 
     @staticmethod
     def transMESS(json_data):

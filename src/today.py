@@ -6,7 +6,7 @@
 
 __author__ = "Vincent Zhang"
 
-
+import template
 import pgconfig
 import usrconfig
 import template
@@ -20,19 +20,17 @@ class HistoryAcquirer:
     def getJson():
         url = pgconfig.today_api
         r = requests.get(url)
-        return json.loads(r.content)
+        return json.loads(r.text)
 
     @staticmethod
     def transMESS(json_data):
         
         data = json_data["result"]
         mess = """"""
-        temp = """<tr><td style="white-space:nowrap">{year}</td><td style="text-align:left">{event}</td></tr>"""
+        temp = """<tr><td style="white-space:nowrap;text-align:center">{year}</td><td style="text-align:left">{event}</td></tr>"""
         
         for i in range(len(data)):
             mess = mess + temp.format(year=data[i]["year"], event=data[i]["title"])
-        
-        mess = "<table style=\"margin-left:auto;margin-right:auto;width:80%\" border=\"1\">" + mess + "</table>"
 
         return mess
 
@@ -42,18 +40,6 @@ class HistoryAcquirer:
         json_data = HistoryAcquirer.getJson()
         table = HistoryAcquirer.transMESS(json_data)
 
-        mess = """
-        <div style="text-align:center;">
-        <h3 class="news-wrap-title" style="font-size:20px">
-        历史上的今天<br><p></p>
-        </h3> <div style="text-align:center">
-        {table}
-        </div>
-        <p></p>
-        <p></p>
-        </div>
-        """
-
-        return mess.format(table=table)
+        return template.TODAY_TEMP.format(mess=table)
 
 

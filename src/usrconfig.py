@@ -8,11 +8,9 @@
 
 import security
 
-
 users = security.users
 
 myname = security.myname
-
 
 FOLDER_PATH_ = "./pictures/"
 
@@ -80,9 +78,6 @@ NEWS_CARD_TEMP = """<div class="card m-panel card9 f-weibo"><div class="card-wra
 <article class="weibo-main">
 <div class="weibo-og">
 <p class="txt-margin anim-load">{title}</p>
-</div>
-<div class="m-avatar-box">
-原文链接：<a href="{news_link}">{news_link}</a>
 </div>
 </article>
 <p></p>
