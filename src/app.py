@@ -22,6 +22,7 @@ from calendarimg import calendarAcquirer
 from bingImg import bingAcquirer
 from music import musicAcquirer
 from english import englishAcquirer
+from holidaytts import HolidayAcquirer
 import time
 
 __author__ = 'Vincent Zhang'
@@ -41,13 +42,23 @@ def start():
     bing_mess = bingAcquirer.getBing()
     eng_mess = englishAcquirer.getEnglish()
     calendarAcquirer.getImg()
+    holiday_mess = HolidayAcquirer.getHolidayMess()
 
     # imgAcquirer.getImg()
 
     for usr in usrconfig.users:
         weather_mess = WeatherAcquirer.getWeatherMess(usr["city_ch"])
         greet_mess = "早上好，" + usr["full_name"] + "！" + weather_mess
-        mess = template.MAIL_TEMP.format(date=time_str,greet=greet_mess,today=today_mess,news=news_mess,music=music_mess,english=eng_mess,img_description=bing_mess,myname=security.myname)
+        mess = template.MAIL_TEMP.format(date=time_str, \
+                                    greet=greet_mess, \
+                                    today=today_mess, \
+                                    news=news_mess, \
+                                    music=music_mess, \
+                                    english=eng_mess, \
+                                    img_description=bing_mess, \
+                                    myname=security.myname, \
+                                    holiday=holiday_mess)
+
         MailSender.sendmail(usr["full_name"], usr["mail"], mess)
         time.sleep(5)
 

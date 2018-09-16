@@ -1,3 +1,5 @@
 src/security.py
 src/__pycache__
 pictures
+src/users.json
+src/pictures

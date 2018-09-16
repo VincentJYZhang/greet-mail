@@ -20,6 +20,7 @@ MAIL_TEMP = """<!doctype html>
         <div style="height:100%;width:90%;margin-right:auto;margin-left:auto;margin-top:10px;word-break:break-all;">
             <h1>{date} 的问候</h1>
             <p style="word-wrap:break-word;text-indent:40px;">{greet}</p>
+            <p style="word-wrap:break-word;text-indent:40px;">{holiday}</p>
             <p>&nbsp;</p>
             <h2>一觉醒来世界发生了什么</h2>
             {news}
