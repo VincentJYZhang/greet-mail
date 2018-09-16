@@ -3,7 +3,7 @@
 
     整个程序的调度系统
 
-    github: https://github.com/VincentJYZhang/greet-mail
+    GitHub: https://github.com/VincentJYZhang/greet-mail
     write on 2018.09.14
 """
 
