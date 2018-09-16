@@ -85,11 +85,11 @@ class MailSender:
         f.close()
 
 
-        # 在服务器上把下面一行注释了，改成:
-        # server = smtplib.SMTP_SSL(smtp_server, 465) # 服务器端用
+        # 如果部署在服务器上不支持，就把这一行注释了，改成:
+        # server = smtplib.SMTP_SSL(smtp_server, 465)
         server = smtplib.SMTP(smtp_server, 25)
         
-        # 调试模式
+        # 调试模式，部署之后可以注释掉
         server.set_debuglevel(1)
         
         server.login(from_addr, password)
