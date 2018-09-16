@@ -1,3 +1,10 @@
+"""
+    template.py
+
+    存储邮件内容模板
+"""
+
+__author__ = 'Vincent Zhang'
 
 
 MAIL_TEMP = """<!doctype html>
@@ -49,8 +56,7 @@ MAIL_TEMP = """<!doctype html>
 
 NEWS_TEMP = """{mess}<blockquote><p>更多请看：{url}</p></blockquote>"""
 
-TODAY_TEMP = """<tbody>{mess}</tbody>
-"""
+TODAY_TEMP = """<tbody>{mess}</tbody>"""
 
 MUSIC_TEMP = """<h3>流行指数</h3><ol>{popular}</ol>
 <h3>热歌榜</h3><ol>{hot}</ol>

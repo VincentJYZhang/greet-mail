@@ -46,4 +46,4 @@ class WeatherAcquirer:
 
 
 if __name__ == '__main__':
-    print(WeatherAcquirer.getWeatherMess("重庆"))
+    print(WeatherAcquirer.getWeatherMess("北京"))

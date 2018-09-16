@@ -2,6 +2,8 @@
     bingImg.py
 
     获取bing壁纸
+    调用方式: bingAcquirer.getBing()
+    返回图片描述（多半是地点）
 
     write on 2018.09.15
 """

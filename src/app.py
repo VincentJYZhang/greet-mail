@@ -3,6 +3,7 @@
 
     整个程序的调度系统
 
+    github: https://github.com/VincentJYZhang/greet-mail
     write on 2018.09.14
 """
 
@@ -44,10 +45,9 @@ def start():
     # imgAcquirer.getImg()
 
     for usr in usrconfig.users:
-        temp = template.MAIL_TEMP
         weather_mess = WeatherAcquirer.getWeatherMess(usr["city_ch"])
         greet_mess = "早上好，" + usr["full_name"] + "！" + weather_mess
-        mess = temp.format(date=time_str,greet=greet_mess,today=today_mess,news=news_mess,music=music_mess,english=eng_mess,img_description=bing_mess,myname=security.myname)
+        mess = template.MAIL_TEMP.format(date=time_str,greet=greet_mess,today=today_mess,news=news_mess,music=music_mess,english=eng_mess,img_description=bing_mess,myname=security.myname)
         MailSender.sendmail(usr["full_name"], usr["mail"], mess)
         time.sleep(5)
 

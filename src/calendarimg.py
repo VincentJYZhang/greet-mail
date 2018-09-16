@@ -1,7 +1,8 @@
 """
     calendarimg.py
 
-    获取单向历
+    获取单向历，存储于本地
+    调用方式: calendarAcquirer.getImg()
 
     write on 2018.09.15
 """
@@ -76,4 +77,4 @@ class calendarAcquirer:
 
 
 if __name__ == '__main__':
-        calendarAcquirer.saveImg(calendarAcquirer.getUrl())
+        calendarAcquirer.getImg()

@@ -13,8 +13,9 @@ import security
 weather_api = "http://v.juhe.cn/weather/index?format=1&cityname={cityname}&key={appkey}"
 weather_api_key = security.weather_api_key
 
-news_api = "http://v.juhe.cn/toutiao/index?type={type}&key={appkey}"
-news_api_key = security.news_api_key
+# 废弃
+# news_api = "http://v.juhe.cn/toutiao/index?type={type}&key={appkey}"
+# news_api_key = security.news_api_key
 
 weibo_api = "https://m.weibo.cn/api/container/getIndex?type=uid&value={uid}&containerid=107603{uid}"
 

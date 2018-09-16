@@ -1,5 +1,9 @@
 # 一点小的说明
 
+## 如何运行
+
+`python app.py` or `python3 app.py`
+
 ## 关于无法找到security
 
 我从中拔除了`security.py`文件，里面主要是我的邮箱、密码、API KEY等，所以你只需要将文件中含有security文件的配置（好像只有四个地方），改成自己的设置即可。

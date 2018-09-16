@@ -2,6 +2,7 @@
     english.py
 
     获取每日英语
+    调用方式: englishAcquirer.getEnglish()
 
     write on 2018.09.15
 """

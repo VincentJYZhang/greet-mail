@@ -18,4 +18,6 @@ Greet your friends every moning!
 
 ---
 
-觉得不错给个Star?
+觉得不错给个Star? 
+
+GitHub: https://github.com/VincentJYZhang/greet-mail
