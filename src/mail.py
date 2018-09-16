@@ -85,6 +85,8 @@ class MailSender:
         f.close()
 
 
+        # 在服务器上把下面一行注释了，改成:
+        # server = smtplib.SMTP_SSL(smtp_server, 465) # 服务器端用
         server = smtplib.SMTP(smtp_server, 25)
         
         # 调试模式
