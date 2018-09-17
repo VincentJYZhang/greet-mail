@@ -7,11 +7,19 @@ Greet your friends every moning!
 手机邮件的界面略览如下
 
 
-![邮件界面1](./demo/demo1.png)
+<table width="fit-content" align="center">
+<tr><td>
 
-![邮件界面2](./demo/demo2.png)
+<ul style="list-style:none">
+<li style="float:left;max-width:300px;height:auto"><a href="#"><img src="./demo/page1.png" /></a></li>
+<li style="float:left;max-width:300px;height:auto"><a href="#"><img src="./demo/page2.png" /></a></li>
+<li style="float:left;max-width:300px;height:auto"><a href="#"><img src="./demo/page3.png" /></a></li>
+<li style="float:left;max-width:300px;height:auto"><a href="#"><img src="./demo/page4.png" /></a></li>
+<li style="float:left;max-width:300px;height:auto"><a href="#"><img src="./demo/page5.png" /></a></li>
+<li style="float:left;max-width:300px;height:auto"><a href="#"><img src="./demo/page6.png" /></a></li>
+</ul>
 
-![邮件界面3](./demo/demo3.png)
+</td></tr></table>
 
 
 ## 每天早晨给你自己和你的朋友来一个，是不是很棒！
