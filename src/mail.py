@@ -85,7 +85,9 @@ class MailSender:
         f.close()
 
 
-        # 如果部署在服务器上不支持，就把这一行注释了，改成:
+        # 如果部署在服务器上，部分提供商不开放25端口（说是为了提高IP段发邮件的质量）
+        # 那就可以申请解封25端口（但要求只能使用第三方SMTP服务器而不能直接发邮件）
+        # 但是我们还有一种更为便捷的解决方案把这一行注释了，改成:
         # server = smtplib.SMTP_SSL(smtp_server, 465)
         server = smtplib.SMTP(smtp_server, 25)
         
