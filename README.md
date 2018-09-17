@@ -7,11 +7,11 @@ Greet your friends every moning!
 手机邮件的界面略览如下
 
 
-![邮件界面1](./demo1.png)
+![邮件界面1](./demo/demo1.png)
 
-![邮件界面2](./demo2.png)
+![邮件界面2](./demo/demo2.png)
 
-![邮件界面3](./demo3.png)
+![邮件界面3](./demo/demo3.png)
 
 
 ## 每天早晨给你自己和你的朋友来一个，是不是很棒！
