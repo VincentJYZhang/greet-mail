@@ -6,7 +6,7 @@ Greet your friends every moning!
 
 手机邮件的界面略览如下
 
-
+<!--
 <table width="fit-content" align="center">
 <tr><td>
 
@@ -20,6 +20,9 @@ Greet your friends every moning!
 </ul>
 
 </td></tr></table>
+-->
+
+![](./demo/demo.png)
 
 
 ## 每天早晨给你自己和你的朋友来一个，是不是很棒！
