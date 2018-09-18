@@ -21,8 +21,18 @@ class WeatherAcquirer:
 
     @staticmethod
     def getJson(city_name):
+
         url = pgconfig.weather_api.format(cityname=city_name,appkey=pgconfig.weather_api_key)
         r = requests.get(url)
+
+        try_count = pgconfig.try_count
+
+        while (r.status_code != 200 and try_count > 0):
+            r = requests.get(url)
+            try_count -= 1
+
+        r.raise_for_status()
+
         return json.loads(r.text)
 
     @staticmethod

@@ -44,6 +44,15 @@ class NewsAcquirer:
         url = "https://app.jike.ruguoapp.com/1.0/messages/history"
 
         r = requests.post(url, headers=headers, data=json.dumps(body))
+
+        try_count = pgconfig.try_count
+
+        while (r.status_code != 200 and try_count > 0):
+            r = requests.post(url, headers=headers, data=json.dumps(body))
+            try_count -= 1
+
+        r.raise_for_status()
+
         return json.loads(r.text)
 
     @staticmethod

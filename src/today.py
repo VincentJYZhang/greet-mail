@@ -20,6 +20,15 @@ class HistoryAcquirer:
     def getJson():
         url = pgconfig.today_api
         r = requests.get(url)
+
+        try_count = pgconfig.try_count
+
+        while (r.status_code != 200 and try_count > 0):
+            r = requests.get(url)
+            try_count -= 1
+
+        r.raise_for_status()
+
         return json.loads(r.text)
 
     @staticmethod

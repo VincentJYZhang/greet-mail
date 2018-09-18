@@ -13,6 +13,9 @@ import security
 weather_api = "http://v.juhe.cn/weather/index?format=1&cityname={cityname}&key={appkey}"
 weather_api_key = security.weather_api_key
 
+# 请求失败后尝试次数
+try_count = 3
+
 # 废弃
 # news_api = "http://v.juhe.cn/toutiao/index?type={type}&key={appkey}"
 # news_api_key = security.news_api_key

@@ -44,11 +44,24 @@ def start():
     calendarAcquirer.getImg()
     holiday_mess = HolidayAcquirer.getHolidayMess()
 
+    usr = {}
+    cities = []
+
+    for usr in usrconfig.users:
+        if usr["city_ch"] not in cities:
+            cities.append(usr["city_ch"])
+
+    weather_greets = {}
+
+    for city in cities:
+        weather_greets[city] = WeatherAcquirer.getWeatherMess(city)
+
+
     # imgAcquirer.getImg()
 
     for usr in usrconfig.users:
-        weather_mess = WeatherAcquirer.getWeatherMess(usr["city_ch"])
-        greet_mess = "早上好，" + usr["full_name"] + "！" + weather_mess
+        # weather_mess = WeatherAcquirer.getWeatherMess(usr["city_ch"])
+        greet_mess = "早上好，" + usr["full_name"] + "！" + weather_greets[usr["city_ch"]]
         mess = template.MAIL_TEMP.format(date=time_str, \
                                     greet=greet_mess, \
                                     today=today_mess, \

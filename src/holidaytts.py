@@ -10,7 +10,7 @@
 
 __author__ = "Vincent Zhang"
 
-
+import pgconfig
 import requests
 import json
 
@@ -21,6 +21,15 @@ class HolidayAcquirer:
     def getJson():
         url = "http://lanfly.vicp.io/api/holiday/tts"
         r = requests.get(url)
+
+        try_count = pgconfig.try_count
+
+        while (r.status_code != 200 and try_count > 0):
+            r = requests.get(url)
+            try_count -= 1
+
+        r.raise_for_status()
+
         return json.loads(r.text)
 
     @staticmethod
