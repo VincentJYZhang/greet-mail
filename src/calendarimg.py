@@ -43,9 +43,10 @@ class calendarAcquirer:
 
         imgUrl = ""
         for card in data['data']['cards']:
-            if card['mblog']['page_info']['page_title'] == "#单向历#":
-                imgUrl = card['mblog']['original_pic']
-                break
+            if 'page_info' in card['mblog']:
+                if card['mblog']['page_info']['page_title'] == "#单向历#":
+                    imgUrl = card['mblog']['original_pic']
+                    break
 
         return imgUrl
 
