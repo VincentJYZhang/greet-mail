@@ -58,7 +58,13 @@ class NewsAcquirer:
     @staticmethod
     def transMESS(json_data):
         
-        news = json_data['data'][0]['content']
+        # 因为月初有个月初加餐，所以这里得进行一下过滤
+        for card in json_data['data']:
+            if 'content' in card:
+                news = card['content']
+                if 'https://www.okjike.com/medium/' in news:
+                    break
+
         news = news.replace("(欢迎到评论区理性发言，友好讨论)","")
 
         pattern = re.compile(r'\d\. .+?\n')
