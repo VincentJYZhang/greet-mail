@@ -22,7 +22,7 @@ try_count = 3
 
 weibo_api = "https://m.weibo.cn/api/container/getIndex?type=uid&value={uid}&containerid=107603{uid}"
 
-today_api = "https://www.ipip5.com/today/api.php?type=json"
+today_api = "http://www.ipip5.com/today/api.php?type=json"
 
 headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
     'Accept':'application/json, text/plain, */*',

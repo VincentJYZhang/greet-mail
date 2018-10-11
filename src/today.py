@@ -52,3 +52,5 @@ class HistoryAcquirer:
         return template.TODAY_TEMP.format(mess=table)
 
 
+if __name__ == "__main__":
+    print(HistoryAcquirer.getTodayMess())
