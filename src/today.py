@@ -52,5 +52,13 @@ class HistoryAcquirer:
         return template.TODAY_TEMP.format(mess=table)
 
 
+    @staticmethod
+    def getInfo():
+        """
+        uniform interface
+        """
+        return HistoryAcquirer.getTodayMess()
+
+
 if __name__ == "__main__":
     print(HistoryAcquirer.getTodayMess())

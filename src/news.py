@@ -88,5 +88,13 @@ class NewsAcquirer:
         return NewsAcquirer.transMESS(NewsAcquirer.getJson())
 
 
+    @staticmethod
+    def getInfo():
+        """
+        uniform interface
+        """
+        return NewsAcquirer.getNewsMess()
+
+
 if __name__ == '__main__':
     print(NewsAcquirer.getNewsMess())

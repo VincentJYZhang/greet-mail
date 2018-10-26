@@ -48,5 +48,13 @@ class HolidayAcquirer:
         return HolidayAcquirer.transMESS(HolidayAcquirer.getJson())
 
 
+    @staticmethod
+    def getInfo():
+        """
+        uniform interface
+        """
+        return HolidayAcquirer.getHolidayMess()
+
+
 if __name__ == '__main__':
     print(HolidayAcquirer.getHolidayMess())

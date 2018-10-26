@@ -75,5 +75,13 @@ class musicAcquirer:
         return musicAcquirer.transMess(musicAcquirer.getJson())
 
 
+    @staticmethod
+    def getInfo():
+        """
+        uniform interface
+        """
+        return musicAcquirer.getMusic()
+
+
 if __name__ == '__main__':
         print(musicAcquirer.getMusic())

@@ -63,6 +63,14 @@ class englishAcquirer:
     def getEnglish():
         return englishAcquirer.transMess(englishAcquirer.getJson())
 
+    
+    @staticmethod
+    def getInfo():
+        """
+        uniform interface
+        """
+        return englishAcquirer.getEnglish()
+
 
 if __name__ == '__main__':
         print(englishAcquirer.getEnglish())

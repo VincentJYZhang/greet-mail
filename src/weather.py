@@ -55,5 +55,13 @@ class WeatherAcquirer:
         return WeatherAcquirer.transMESS(WeatherAcquirer.getJson(city_name))
 
 
+    @staticmethod
+    def getInfo(city_name = "北京"):
+        """
+        uniform interface
+        """
+        return WeatherAcquirer.getWeatherMess(city_name)
+
+
 if __name__ == '__main__':
     print(WeatherAcquirer.getWeatherMess("北京"))
